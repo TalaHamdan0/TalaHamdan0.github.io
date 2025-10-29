@@ -1,0 +1,28 @@
+name: Update Portfolio Projects
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # يوميًا منتصف الليل
+  workflow_dispatch:
+
+jobs:
+  update-projects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch public repositories
+        run: |
+          curl -s https://api.github.com/users/TalaHamdan0/repos?per_page=100 \
+          | jq -r '.[] | "<div class=\"project\"><h3>\(.name)</h3><p>\(.description // "No description")</p><p>GitHub: <a href=\"\(.html_url)\" target=\"_blank\">\(.html_url)</a></p></div>"' \
+          > projects.html
+      - name: Update index.html
+        run: |
+          sed -i '/<!-- Projects will be updated automatically by GitHub Actions -->/r projects.html' index.html
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add index.html
+          git commit -m "Update projects automatically"
+          git push
+
