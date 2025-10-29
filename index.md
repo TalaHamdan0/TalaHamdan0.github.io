@@ -1,34 +1,37 @@
-# Tala Hamdan - Data Science & AI Portfolio
-
-Email: talahamdan2025@gmail.com  
-LinkedIn: [https://www.linkedin.com/in/tala-hamdan-23888036b](https://www.linkedin.com/in/tala-hamdan-23888036b)  
-GitHub: [https://github.com/TalaHamdan0](https://github.com/TalaHamdan0)  
-
----
-
-## Skills
-Python, SQL, Machine Learning, Generative AI, Power BI, Excel  
-
----
-
-## Projects
-
-### GenAug-GAN-MNIST
-Generative Adversarial Network (GAN) to generate handwritten digits (MNIST).  
-[GitHub Link](https://github.com/TalaHamdan0/GenAug-GAN-MNIST)
-
-### COVID-19 Cases Prediction – Togo
-Data analysis, visualization, and Linear Regression prediction.  
-[GitHub Link](https://github.com/TalaHamdan0/DS-COVID19-Analysis)
-
-### Arabic News Analyzer
-Interactive tool to search and summarize Arabic news articles.  
-[GitHub Link](https://github.com/TalaHamdan0/Arabic-News-Analyzer)
-
-### Sales Prediction using Linear Regression
-Predict total sales for each transaction.  
-[GitHub Link](https://github.com/TalaHamdan0/DS-Retail-Sales-Analysis)
-
-### Voice Emotion Recognition (CNN)
-Classify speech into 8 emotions using CNN.  
-[GitHub Link](https://github.com/TalaHamdan0/Voice-Emotion-Recognition-using-CNN)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tala Hamdan - Data Science & AI Portfolio</title>
+<style>
+    body { font-family: Arial, sans-serif; color: #000; background: #fff; margin: 40px; line-height: 1.6; }
+    h1, h2, h3 { margin-bottom: 10px; }
+    a { color: #000; text-decoration: underline; }
+    hr { border: 0; border-top: 1px solid #000; margin: 20px 0; }
+    .project { margin-bottom: 20px; }
+</style>
+</head>
+<body>
+<h1>Tala Hamdan</h1>
+<p>Email: <a href="mailto:talahamdan2025@gmail.com">talahamdan2025@gmail.com</a> | Phone: +962796159985</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/tala-hamdan-23888036b" target="_blank">LinkedIn</a></p>
+<p>GitHub: <a href="https://github.com/TalaHamdan0" target="_blank">GitHub</a></p>
+<hr>
+<h2>Profile</h2>
+<p>Highly analytical Data Science & AI enthusiast skilled in Python, Machine Learning, and data visualization. Completed IBM Professional Certificate in Data Science & AI.</p>
+<hr>
+<h2>Skills</h2>
+<p>Python, Pandas, NumPy, SQL, Git, GitHub, Machine Learning, Regression, Classification, Scikit-learn, Generative AI, Prompt Engineering, Power BI, Excel, Data Visualization</p>
+<hr>
+<h2>Projects</h2>
+<div id="projects">
+<!-- GitHub Actions will update this section automatically -->
+</div>
+<hr>
+<h2>Education</h2>
+<p>BSc in Computer Science – World Islamic Science and Education University | Expected 2027</p>
+<hr>
+<h2>Certifications</h2>
+<p>IBM Professional Certificate in Data Science & AI – Coursera, 2025</p>
+</body>
+</html>
