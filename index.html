@@ -1,28 +1,39 @@
-name: Update Portfolio Projects
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tala Hamdan - Data Science & AI Portfolio</title>
+<style>
+    body { font-family: Arial, sans-serif; color: #000; background: #fff; margin: 40px; line-height: 1.6; }
+    h1, h2, h3 { margin-bottom: 10px; }
+    a { color: #000; text-decoration: underline; }
+    hr { border: 0; border-top: 1px solid #000; margin: 20px 0; }
+    .project { margin-bottom: 20px; }
+</style>
+</head>
+<body>
+<h1>Tala Hamdan</h1>
+<p>Email: <a href="mailto:talahamdan2025@gmail.com">talahamdan2025@gmail.com</a> | Phone: +962796159985</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/tala-hamdan-23888036b" target="_blank">LinkedIn</a></p>
+<p>GitHub: <a href="https://github.com/TalaHamdan0" target="_blank">GitHub</a></p>
+<hr>
+<h2>Profile</h2>
+<p>Highly analytical Data Science & AI enthusiast skilled in Python, Machine Learning, and data visualization. Completed IBM Professional Certificate in Data Science & AI.</p>
+<hr>
+<h2>Skills</h2>
+<p>Python, Pandas, NumPy, SQL, Git, GitHub, Machine Learning, Regression, Classification, Scikit-learn, Generative AI, Prompt Engineering, Power BI, Excel, Data Visualization</p>
+<hr>
+<h2>Projects</h2>
+<div id="projects">
+<!-- Projects will be updated automatically by GitHub Actions -->
+</div>
+<hr>
+<h2>Education</h2>
+<p>BSc in Computer Science – World Islamic Science and Education University | Expected 2027</p>
+<hr>
+<h2>Certifications</h2>
+<p>IBM Professional Certificate in Data Science & AI – Coursera, 2025</p>
+</body>
+</html>
 
-on:
-  schedule:
-    - cron: '0 0 * * *' # يوميًا منتصف الليل
-  workflow_dispatch:
-
-jobs:
-  update-projects:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch public repositories
-        run: |
-          curl -s https://api.github.com/users/TalaHamdan0/repos?per_page=100 \
-          | jq -r '.[] | "<div class=\"project\"><h3>\(.name)</h3><p>\(.description // "No description")</p><p>GitHub: <a href=\"\(.html_url)\" target=\"_blank\">\(.html_url)</a></p></div>"' \
-          > projects.html
-      - name: Update index.html
-        run: |
-          sed -i '/<!-- Projects will be updated automatically by GitHub Actions -->/r projects.html' index.html
-      - name: Commit and push changes
-        run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add index.html
-          git commit -m "Update projects automatically"
-          git push
 
